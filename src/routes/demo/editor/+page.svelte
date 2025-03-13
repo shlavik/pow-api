@@ -1,22 +1,14 @@
 <script lang="ts">
-	import Editor from '$lib/components/Editor.svelte'
+	import Tiptap from '$lib/components/editor/Editor.svelte'
 
 	let markdown = $state(`# HEADER
 
 * second
 * first
 
-\`<div style="text-align: right"> your-text-here </div>\`
+> TEST
 
-\`\`\`JavaScript
-let a = 1;
-let b = 2;
-let c = a + b;
-\`\`\`
-
-\$\$
-a + b = c
-\$\$
+\`<div style="text-align: right"> your-text-here </div>\`\
 
 | HEAD 1 | HEAD 2 | HEAD 3 |
 | :----- | :----: | -----: |
@@ -26,7 +18,7 @@ a + b = c
 </script>
 
 <main>
-	<Editor bind:markdown />
+	<Tiptap bind:markdown />
 
 	<hr />
 
